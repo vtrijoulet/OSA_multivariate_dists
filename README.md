@@ -12,5 +12,4 @@ After that you can use it in a TMB model with:
 ```C++
 #include <TMB.hpp>
 #include <OSA_multivariate_dists/dists.hpp>
-using contrib::dists::;
 ```
