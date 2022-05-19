@@ -11,5 +11,5 @@ TMB:::install.contrib("https://github.com/vtrijoulet/OSA_multivariate_dists/arch
 After that you can use it in a TMB model with:
 ```C++
 #include <TMB.hpp>
-#include <OSA_multivariate_dists/dists.hpp>
+#include <contrib/OSA_multivariate_dists-main/distr.hpp>
 ```
