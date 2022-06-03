@@ -1,3 +1,18 @@
+//  --------------------------------------------------------------------------
+// Copyright (c) 2022, Vanessa Trijoulet <vtri@aqua.dtu.dk>, 
+// Christoffer Moesgaard Albertsen <cmoe@aqua.dtu.dk>,
+// Kasper Kristensen <kkr@aqua.dtu.dk>,
+// Chris M. Legault <chris.legault@noaa.gov>,
+// Timothy J. Miller <Timothy.J.Miller@noaa.gov>,
+// and Anders Nielsen <an@aqua.dtu.dk>.
+// All rights reserved.
+// More details in Trijoulet, V., Albertsen, C.M., Kristensen, K., 
+// Legault C.M., Miller T.J., Nielsen, A.,  (in review). 
+// “Model validation for compositional data in stock assessment models: 
+// calculating residuals with correct properties” Fisheries Research.
+//  --------------------------------------------------------------------------
+  
+
 namespace dists {
 // TODO: Move to TMB
 template<class Type>
