@@ -7,9 +7,10 @@
 // and Anders Nielsen <an@aqua.dtu.dk>.
 // All rights reserved.
 // More details in Trijoulet, V., Albertsen, C.M., Kristensen, K., 
-// Legault C.M., Miller T.J., Nielsen, A.,  (in review). 
-// “Model validation for compositional data in stock assessment models: 
-// calculating residuals with correct properties” Fisheries Research.
+// Legault C.M., Miller T.J., Nielsen, A.,  (2023). 
+// Model validation for compositional data in stock assessment models: 
+// calculating residuals with correct properties Fisheries Research, 
+// Volume 257: 106487 DOI: 10.1016/j.fishres.2022.106487.
 //  --------------------------------------------------------------------------
   
 
@@ -187,6 +188,7 @@ Type pbetabinom(Type x, Type N, Type alpha, Type beta, int do_log)
     obs[1] = N-i;
     Fx += ddirmultinom(obs, aa, 0); //dbetabinomial, just two categories.
   }
+  Fx = CppAD::CondExpGe(Fx,Type(1),Type(1),Fx);// trick to avoid FX>1 due to imprecision
   if(do_log == 1) return log(Fx);
   else return Fx;
 }
